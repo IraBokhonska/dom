@@ -1,0 +1,227 @@
+@import "_null";
+// --------------------------------------player---------------------------------------
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+
+  background: url("https://www.transparenttextures.com/patterns/textured-paper.png");
+
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.player {
+  &__container {
+    max-width: 100%;
+    padding: 50px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 60px;
+    color: #000000;
+    line-height: 110%;
+    text-align: center;
+    text-shadow: 1px 3px 5px #ffffff;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 160%;
+
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      transform: translate(50px);
+      cursor: pointer;
+    }
+  }
+}
+
+.black {
+  color: #000000;
+  text-decoration: underline;
+}
+
+//---------------------------modal-window----------------------------------------------------
+
+.section {
+  padding: 75px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+
+  background-color: transparent;
+  border: 2px solid white;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  &__close {
+    color: #98960e;
+    border: 2px solid #98960e;
+  }
+}
+
+.button_x {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  display: block;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background-color: transparent;
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.15s ease-in-out;
+  border-radius: 3px;
+  border: none;
+
+  font-size: 22px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.modal {
+  padding: 30px;
+  inset: 0;
+
+  display: none;
+
+  position: fixed;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+
+  cursor: pointer;
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 160%;
+  }
+}
+
+.modal__main {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+
+  position: relative;
+
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 16px;
+
+  cursor: default;
+}
+
+// ---------------------traffic-light-----------------------------------------
+
+.traffic-light {
+  &__section {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__block {
+    margin: 50px auto;
+    width: 80px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    background-color: #002329;
+    border-radius: 40px;
+  }
+
+  &__light {
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+    box-shadow: 0 0 25px #ffffff;
+  }
+}
+
+.change-light {
+  width: 200px;
+  min-height: 60px;
+
+  border-radius: 10px;
+  background-color: #002329;
+  box-shadow: 0 0 25px #ffffff;
+
+  color: #ffffff;
+  font-size: 20px;
+
+  &:hover {
+    box-shadow: 0 0 25px #000000;
+    transition: 0.3s;
+  }
+}
